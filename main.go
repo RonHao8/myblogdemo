@@ -1,11 +1,12 @@
 package main
 
 import (
-	_ "myblogdemo/routers"
 	"github.com/astaxie/beego"
+	_ "myblogdemo/routers"
+	"myblogdemo/utils"
 )
 
 func main() {
+	utils.InitMysql()
 	beego.Run()
 }
-
